@@ -1,18 +1,52 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
+
+// const App = () => {
+
+//   const [num, setNum] = useState(0)
+
+//   return (
+//     <div>
+//       <p>{num}</p>
+//       <button
+//       className='bg-green-500 text-white p-2 rounded-md'
+//        onClick={() => setNum(num + 1)}>add</button>
+//       <button
+//       className='bg-red-500 text-white p-2 rounded-md'
+//        onClick={() => setNum(num - 1)}>sub</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// form handling
+
+import React from 'react'
+
+
 
 const App = () => {
-  
-  const [num, setNum] = useState(0)
+
+  const handleSubmit = (e) => {
+   e.preventDefault()
+  }
 
   return (
     <div>
-      <p>{num}</p>
-      <button
-      className='bg-green-500 text-white p-2 rounded-md'
-       onClick={() => setNum(num + 1)}>add</button>
-      <button
-      className='bg-red-500 text-white p-2 rounded-md'
-       onClick={() => setNum(num - 1)}>sub</button>
+      <form 
+      onSubmit={handleSubmit}
+      className='flex flex-col items-center justify-center h-screen'>
+        <input className='border-2 border-gray-300 rounded-md p-2'
+          type="text" placeholder='name' />
+        <input className='border-2 border-gray-300 rounded-md p-2'
+          type="email" placeholder='email' />
+        <input className='border-2 border-gray-300 rounded-md p-2'
+          type="password" placeholder='password' />
+        <button className='bg-green-500 text-white p-2 m-2 rounded-lg '
+        type='submit'>submit</button>
+      </form>
     </div>
   )
 }

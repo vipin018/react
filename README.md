@@ -27,3 +27,15 @@ here `a` is the state variable and `setA` is the function that updates the state
 
 
 
+### form handling
+
+- form handling is a process of handling the form data, it prevents the default behavior of the form by not refreshing the page.
+
+- how can we handle the form?
+by using the preventDefault() method.
+
+example:
+```
+const handleSubmit = (e) => {
+  e.preventDefault()
+}
