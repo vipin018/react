@@ -118,7 +118,7 @@ export default App
 */
 
 // COMPONENT
-
+/*
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -132,6 +132,64 @@ const App = () => {
 }
 
 export default App
+*/
 
+// PROPS
+
+import React from 'react'
+import Card from './components/Card'
+const App = () => {
+
+  const users = [
+   
+      {
+        "name": "Amit Sharma",
+        "city": "Mumbai",
+        "age": 28,
+        "profile_picture": "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "job_profile": "Software Engineer"
+      },
+      {
+        "name": "Priya Verma",
+        "city": "Delhi",
+        "age": 25,
+        "profile_picture": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "job_profile": "Data Analyst"
+      },
+      {
+        "name": "Rahul Singh",
+        "city": "Bangalore",
+        "age": 30,
+        "profile_picture": "https://images.unsplash.com/photo-1576558656222-ba66febe3dec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "job_profile": "Product Manager"
+      },
+      {
+        "name": "Ananya Patel",
+        "city": "Ahmedabad",
+        "age": 22,
+        "profile_picture": "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "job_profile": "Graphic Designer"
+      },
+      {
+        "name": "Vikram Khanna",
+        "city": "Pune",
+        "age": 35,
+        "profile_picture": "https://images.unsplash.com/photo-1651684215020-f7a5b6610f23?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "job_profile": "DevOps Engineer"
+      }
+    ]
+
+
+
+  return (
+    <div className='p-10'>
+    {users.map(function(user){
+      return <Card username={user.name} city={user.city} age={user.age} profile_picture={user.profile_picture} job_profile={user.job_profile} />
+    })}
+    </div>
+  )
+}
+
+export default App
 
 
