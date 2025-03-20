@@ -39,3 +39,10 @@ example:
 const handleSubmit = (e) => {
   e.preventDefault()
 }
+```
+
+### two way data binding
+
+- two way data binding is a process of binding the data between the input and the state variable.
+
+
