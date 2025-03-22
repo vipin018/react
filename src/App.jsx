@@ -135,6 +135,7 @@ export default App
 */
 
 // PROPS
+/*
 
 import React from 'react'
 import Card from './components/Card'
@@ -192,4 +193,40 @@ const App = () => {
 
 export default App
 
+*/
+
+// API CALLING
+
+import axios from 'axios'
+import React, { useState } from 'react'
+
+const App = () => {
+
+  const [data, setData] = useState([])
+
+const getData = async () => {
+  const response = await axios.get('https://jsonplaceholder.typicode.com/users')
+  setData(response.data)
+  
+}
+
+  return (
+    <div className='flex flex-col items-center justify-center h-screen'>
+      <button className='bg-red-500 text-white px-2 py-3 m-10 rounded text-4xl font-semibold animate-bounce '
+     onClick={getData}
+     >Get Data</button>
+      <div className='bg-gray-100  flex flex-wrap justify-evenly gap-4 rounded-lg'>
+        {data.map((user) => (
+          <div key={user.id} className='border-2 border-gray-300 p-4 rounded-lg'>
+            <h1>username: {user.name}</h1>
+            <p>email: {user.email}</p>
+            <p>city: {user.address.city}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default App
 
