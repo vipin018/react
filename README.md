@@ -46,3 +46,27 @@ const handleSubmit = (e) => {
 - two way data binding is a process of binding the data between the input and the state variable.
 
 
+### props
+
+- props are used to pass the data from the parent component to the child component.
+
+flowchart:
+```
+ParentComponent
+  |
+  v
+ChildComponent
+```
+
+how it works?
+
+- the parent component passes the data to the child component using the props.
+- the child component receives the data using the props.
+
+example:
+```
+
+  <ParentComponent>
+    <ChildComponent username="John" />
+  </ParentComponent>
+```
